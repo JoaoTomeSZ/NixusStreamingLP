@@ -1,0 +1,256 @@
+:root{
+    --bgcolor: #0f0f0f;
+    --darkpink: #860a4e;
+    --lightpink: #bb136f;
+    --white: #fff;
+    --lightGray: #cfcece;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: var(--bgcolor);
+}
+
+header{
+    padding: 24px 48px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 128px;
+}
+
+ul{
+    display: flex;
+    gap: 64px;
+}
+
+li{
+    list-style: none;
+    color: var(--lightGray);
+    font-size: 1rem;
+    cursor:pointer;
+}
+
+.titleDiv{
+    width: 25%;
+    display: flex;
+    justify-content: start;
+    color: var(--white);
+    flex-direction: column;
+}
+
+.navListDiv{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.headerBtnsDiv{
+    width: 25%;
+    display: flex;
+    justify-content: end;
+    gap: 12px;
+}
+
+#demoBtn{
+    display: flex;
+    padding: 12px;
+    border: 1px solid var(--darkpink);
+    border-radius: 6px;
+    background: none;
+    color: var(--darkpink);
+    transition: .3s ease-in-out;
+}
+
+#demoBtn:hover{
+    background-color: var(--darkpink);
+    color: var(--lightGray);
+}
+
+#testBtn{
+    display: flex;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--lightpink);
+    transition: .3s ease-in-out;
+}
+
+#testBtn:hover{
+    background-color: var(--darkpink);
+    color: var(--lightGray);
+}
+
+
+#title{
+    background-image: url("./images/textGrad.PNG");
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    height: 50%;
+}
+
+.blob{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--darkpink);
+    height: 500px;
+    width: 550px;
+    border-radius: 40% 60% 74% 26% / 38% 41% 59% 62%;
+    color: var(--white);
+    gap: 8px;
+    box-shadow: 10px 15px 10px 1px #0000005b;
+}
+.blob p, h2{
+    width: 75%;
+}
+
+.blob p{
+    color: var(--lightGray);
+}
+
+.blobDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    
+}
+
+.robotHandDiv{
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(5, 0.2fr);
+    grid-template-rows: repeat(3, 0.5fr);
+    place-items: center;
+}
+
+.squares{
+    display: grid;
+    width: 150px;
+    height: 150px;
+    background-color: #000000ad;
+    border-radius: 50%;
+    opacity: 0.2;
+    box-shadow: 0 0 8px 1px #3030300c;
+}
+
+#robotHand{
+    position: absolute;
+    top: 50;
+    left: 100;
+}
+
+.hamburguerDiv{
+    display: none;
+}
+.blobBtnsDiv{
+    display: none;
+}
+
+article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 256px 0;
+    width: 100%;
+}
+
+article h2{
+    color: var(--white);
+    width: 30%;
+    border-bottom: 1px solid var(--lightGray);
+    padding: 16px;
+}
+
+@media (max-width: 500px){
+    *{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    header{
+        display: flex;
+        padding: 24px;
+        position: sticky;
+        top: 0;
+        background-color: var(--bgcolor);
+    }
+    .titleDiv{
+        width: 50%;
+    }
+    .navListDiv{
+        display: none;
+    }
+    .headerBtnsDiv{
+        display: none;
+        
+    }
+    .hamburguerDiv{
+        width: 50%;
+        display: flex;
+        color: var(--lightGray);
+        align-items: center;
+        justify-content: end;
+        text-align: center;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+     .blobDiv{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+     .blob{
+        border-radius: 34% 66% 35% 65% / 65% 65% 35% 35%;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        height: 300px;
+        width: 350px;
+        margin-bottom: 24px;
+     }
+     .robotHandDiv{
+        width: 100%;
+
+     }
+     .squares{
+        display: grid;
+        width: 150px;
+        height: 150px;
+        background-color: #2b2b2ba2;
+        border-radius: 50%;
+        opacity: 0.2;
+        box-shadow: 0 0 8px 1px #30303044;
+    }
+     #robotHand{
+        position: absolute;
+        width:100%;
+        top: 65%;
+        left: 25%;
+        z-index: -5;
+     }
+     .blobBtnsDiv{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+     }
+}
